@@ -1,19 +1,22 @@
 import { Fragment } from 'react';
 
-const Profile = ({ user }) => {
+const Profile = ({ user: { user, followers } }) => {
   return (
     <Fragment>
-      {console.log('USER: ', user)}
       <h1>Login: {user.login}</h1>
+      <img src={user.avatar_url} />
       <p>Location: {user.location}</p>
     </Fragment>
   );
 };
 
 Profile.getInitialProps = async ({ query }) => {
-  const res = await fetch(`https://api.github.com/users/${query.id}`);
-  const json = await res.json();
-  return { user: json };
+  const getUser = await fetch(`https://api.github.com/user/${query.id}`);
+  const user = await getUser.json();
+  const getFollowers = await fetch(user.followers_url);
+  const followers = await getFollowers.json();
+
+  return Object.assign({ user: { user, followers } });
 };
 
 export default Profile;
