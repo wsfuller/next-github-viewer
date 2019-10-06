@@ -8,7 +8,7 @@ const SearchResults = ({ results }) => {
     <ul>
       {results.items.map(item => (
         <li key={item.id}>
-          <Link href={`/profile/${item.login}`}>
+          <Link href={`/profile/${item.id}`}>
             <a>{item.login}</a>
           </Link>
         </li>
