@@ -1,5 +1,7 @@
 import { Fragment } from 'react';
+import fetch from 'isomorphic-unfetch';
 
+import Head from 'next/head';
 import Link from 'next/link';
 
 import Stat from '../../components/Stat';
@@ -7,6 +9,9 @@ import Stat from '../../components/Stat';
 const Profile = ({ user: { user, followers } }) => {
   return (
     <Fragment>
+      <Head>
+        <title>NGHV | {user.login}</title>
+      </Head>
       {/* PROFILE HEADER: Image, Username, Bio, Type, Meta data */}
       <section>
         <h1>
