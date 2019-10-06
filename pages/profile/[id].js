@@ -5,9 +5,6 @@ import Link from 'next/link';
 import Stat from '../../components/Stat';
 
 const Profile = ({ user: { user, followers } }) => {
-  console.log('user: ', user);
-  console.log('user followers: ', followers);
-
   return (
     <Fragment>
       {/* PROFILE HEADER: Image, Username, Bio, Type, Meta data */}
