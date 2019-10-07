@@ -33,9 +33,44 @@ const variables = {
   },
   typography: {
     headers: {
-      family: 'Roboto, sans-serif',
+      family: 'Lato, sans-serif',
       h1: {
-        size: pxToRem(60)
+        size: pxToRem(60),
+        lineHeight: pxToRem(70)
+      },
+      h2: {
+        size: pxToRem(48),
+        lineHeight: pxToRem(56)
+      },
+      h3: {
+        size: pxToRem(36),
+        lineHeight: pxToRem(44)
+      },
+      h4: {
+        size: pxToRem(28),
+        lineHeight: pxToRem(28)
+      },
+      weights: {
+        default: 400,
+        bold: 700
+      }
+    },
+    body: {
+      family: 'Roboto, sans-serif',
+      size: {
+        default: pxToRem(16),
+        small: pxToRem(12),
+        subtitle: pxToRem(20)
+      },
+      lineHeight: {
+        default: pxToRem(24),
+        small: pxToRem(14),
+        subtitle: pxToRem(27)
+      },
+      weights: {
+        light: 300,
+        default: 400,
+        bold: 700
       }
     }
   }
