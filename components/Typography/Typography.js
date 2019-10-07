@@ -25,14 +25,13 @@ const Typography = ({ children, ...props }) => {
 };
 
 Typography.propTypes = {
-  variant: PropTypes.string,
+  variant: PropTypes.string.isRequired,
   bold: PropTypes.bool,
   transform: PropTypes.string,
   small: PropTypes.bool
 };
 
 Typography.defaultProps = {
-  variant: '',
   bold: null,
   transform: '',
   small: null
