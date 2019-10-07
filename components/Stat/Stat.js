@@ -5,8 +5,12 @@ import Typography from '../Typography';
 
 const Stat = ({ title, figure }) => (
   <Fragment>
-    <Typography variant="h1">{title}</Typography>
-    <Typography variant="body1">{figure}</Typography>
+    <Typography variant="h1" data-testid="statTitle">
+      {title}
+    </Typography>
+    <Typography variant="body1" data-testid="statFigure">
+      {figure}
+    </Typography>
   </Fragment>
 );
 
