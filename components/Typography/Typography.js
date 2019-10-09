@@ -32,9 +32,9 @@ Typography.propTypes = {
 };
 
 Typography.defaultProps = {
-  bold: null,
-  transform: '',
-  small: null
+  bold: false,
+  transform: null,
+  small: false
 };
 
 export default Typography;
