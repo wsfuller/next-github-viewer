@@ -1,4 +1,4 @@
-const pxToRem = value => `${value / 16}rem`;
+export const pxToRem = value => `${value / 16}rem`;
 
 const variables = {
   baseUnit: 8,
@@ -73,11 +73,21 @@ const variables = {
         bold: 700
       }
     }
+  },
+  transitions: {
+    default: 0.5,
+    fast: 0.25,
+    slow: 1
   }
 };
 
 export const theme = {
   variables: { ...variables },
+  borderRadius: {
+    default: pxToRem(variables.baseUnit * 2),
+    small: pxToRem(variables.baseUnit),
+    large: pxToRem(variables.baseUnit * 3)
+  },
   section: {
     paddingTop: pxToRem(40),
     paddingBottom: pxToRem(40)

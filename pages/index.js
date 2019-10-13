@@ -1,15 +1,15 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from 'react';
 
-import Link from "next/link";
-import Head from "next/head";
+import Link from 'next/link';
+import Head from 'next/head';
 
-import SearchBar from "../components/SearchBar";
+import SearchBar from '../components/Search/SearchBar';
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchTerm: ""
+      searchTerm: ''
     };
   }
 
@@ -34,7 +34,7 @@ class Home extends Component {
 }
 
 Home.getInitialProps = async ({ req }) => {
-  const res = await fetch("https://api.github.com/repos/zeit/next.js");
+  const res = await fetch('https://api.github.com/repos/zeit/next.js');
   const json = await res.json();
   return { stars: json.stargazers_count };
 };

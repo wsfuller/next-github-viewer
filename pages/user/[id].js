@@ -6,7 +6,10 @@ import Link from 'next/link';
 
 import Stat from '../../components/Stat';
 
+import hasUrlProtocol from '../../common/hasUrlProtocol';
+
 const Profile = ({ user: { user, followers } }) => {
+  console.log('user: ', user);
   return (
     <Fragment>
       <Head>
@@ -24,7 +27,7 @@ const Profile = ({ user: { user, followers } }) => {
           <li>Location: {user.location}</li>
           <li>Company: {user.company}</li>
           <li>
-            <a href={user.blog}>Website</a>
+            <a href={hasUrlProtocol(user.blog)}>Website</a>
           </li>
         </ul>
       </section>
@@ -41,7 +44,7 @@ const Profile = ({ user: { user, followers } }) => {
         <ul>
           {followers.map(follower => (
             <li key={follower.id}>
-              <Link href={`/profile/${follower.id}`}>
+              <Link href={`/user/${follower.id}`}>
                 <a>
                   <img src={follower.avatar_url} />
                   <p>{follower.login}</p>
