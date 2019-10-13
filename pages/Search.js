@@ -3,6 +3,7 @@ import React, { Component, Fragment } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
+import { Container } from '../components/Grid';
 import SearchBar from '../components/Search/SearchBar';
 import SearchResults from '../components/Search/Results';
 
@@ -14,7 +15,9 @@ const SearchPage = ({ searchResults }) => {
       </Head>
 
       <SearchBar />
-      {searchResults.errors ? <h1>error</h1> : <SearchResults results={searchResults} />}
+      <Container>
+        {searchResults.errors ? <h1>error</h1> : <SearchResults results={searchResults} />}
+      </Container>
     </Fragment>
   );
 };
