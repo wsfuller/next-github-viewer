@@ -33,7 +33,7 @@ Typography.propTypes = {
 
 Typography.defaultProps = {
   bold: null,
-  transform: '',
+  transform: null,
   small: null
 };
 

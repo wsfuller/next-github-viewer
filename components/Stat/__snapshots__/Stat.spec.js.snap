@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Stat /> renders correctly 1`] = `
+Array [
+  <h1
+    className="Typographystyles__StyledH1-sc-1n6ui1k-0 bvGdAG"
+    data-testid="statTitle"
+    transform={null}
+  >
+    Stat Title
+  </h1>,
+  <p
+    className="Typographystyles__StyledBody-sc-1n6ui1k-5 cdoZfY"
+    data-testid="statFigure"
+    transform={null}
+  >
+    55
+  </p>,
+]
+`;
