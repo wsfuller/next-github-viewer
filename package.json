@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run test && next build",
     "start": "next start",
-    "test": "jest --verbose",
+    "test": "jest --verbose --collectCoverage",
     "test:watch": "jest --verbose --watchAll"
   },
   "jest": {
