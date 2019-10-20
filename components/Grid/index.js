@@ -1,5 +1,5 @@
 import Container from './Container';
-import Row from './Row';
-import Column from './Column';
+import Grid from './Grid';
+import GridItem from './GridItem';
 
-export { Container, Row, Column };
+export { Container, Grid, GridItem };
