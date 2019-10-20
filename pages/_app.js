@@ -28,7 +28,7 @@ class Application extends App {
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-reboot.min.css"
             integrity="sha256-dARYuC3pd0wa/7R4Hkt/sR2zfLHCgbnVAQ2sPwhNe0A="
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
           />
           <link
             href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:300,400,700&display=swap"
