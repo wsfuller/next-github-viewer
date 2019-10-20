@@ -20,13 +20,23 @@ export const StyledGrid = styled.div`
   ${({
     template,
     theme: {
-      variables: { breakpoints }
+      variables: { baseUnit, breakpoints }
     }
   }) => css`
     grid-template-columns: ${template.base.columns};
     ${template.base.rows && rows(template.base.rows)};
-    ${template.base.rowGap && gridGaps('row', template.base.rowGap)}
-    ${template.base.columnGap && gridGaps('column', template.base.columnGap)}
+    ${template.base.rowGap &&
+      css`
+        row-gap: ${pxToRem(template.base.rowGap * baseUnit)};
+      `}}
+    ${template.base.columnGap &&
+      css`
+        column-gap: ${pxToRem(template.base.columnGap * baseUnit)};
+      `}
+    ${template.base.justifyItems &&
+      css`
+        justify-items: ${template.base.justifyItems};
+      `}
     ${'' /* Responsive Breakpoints */}
     ${template.small && gridBreakpoint(breakpoints.small, template, 'small')}
     ${template.medium && gridBreakpoint(breakpoints.medium, template, 'medium')}
