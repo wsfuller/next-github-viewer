@@ -3,6 +3,7 @@ import React, { Component, Fragment } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
+import { Container, Row, GridItem, Grid } from '../components/Grid';
 import SearchBar from '../components/Search/SearchBar';
 
 class Home extends Component {
@@ -20,14 +21,24 @@ class Home extends Component {
         <Head>
           <title>Home</title>
         </Head>
-
         <Link href="/profile">
           <a>Profile page</a>
         </Link>
-
+        {/* <Header></Header> */}
+        <h1>Header</h1>
         <SearchBar />
-        <div>Next Stars: {stars}</div>
-        {/* <SearchResults /> */}
+        {/* Hero Search */}
+        <h1>Hero w/ Searchbar Component</h1>
+        {/* Section Options */}
+        <h1>Popular Projects/Repos</h1>
+        Next | Bootstrap | freeCodeCamp | You-Dont-Know-JS
+        {/* https://www.freecodecamp.org/news/the-10-github-repos-people-mention-the-most-in-freecodecamps-main-chat-room-189750600fa4/ */}
+        <h1>Developed By Cards:</h1>
+        {/* https://stripe.com/ lifting cards section*/}
+        <h1>Github Docs</h1>
+        {/* https://stripe.com/ right below lifting card section*/}
+        <h1>Footer</h1>
+        {/* <Footer></Footer> */}
       </Fragment>
     );
   }
