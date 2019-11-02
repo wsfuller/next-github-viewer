@@ -21,58 +21,24 @@ class Home extends Component {
         <Head>
           <title>Home</title>
         </Head>
-
         <Link href="/profile">
           <a>Profile page</a>
         </Link>
-
+        {/* <Header></Header> */}
+        <h1>Header</h1>
         <SearchBar />
-        <div>Next Stars: {stars}</div>
-        <Container>
-          <Grid
-            template={{
-              base: {
-                columns: 'repeat(4, 1fr)',
-                rows: '30px 60px 120px',
-                columnGap: 1,
-                rowGap: 1
-              },
-              small: {
-                columns: 'repeat(4, 1fr)',
-                columnGap: 2,
-                rowGap: 2
-              },
-              medium: {
-                columns: 'repeat(4, 1fr)',
-                columnGap: 4,
-                rowGap: 4
-              },
-              large: {
-                columns: 'repeat(4, 1fr)',
-                columnGap: 8,
-                rowGap: 8
-              },
-              xLarge: {
-                columns: 'repeat(4, 1fr)',
-                columnGap: 16,
-                rowGap: 16
-              }
-            }}
-          >
-            <GridItem gridColumnStart={2}>C1</GridItem>
-            <GridItem>C2</GridItem>
-            <GridItem>C3</GridItem>
-            <GridItem>C4</GridItem>
-            <GridItem>C5</GridItem>
-            <GridItem>C6</GridItem>
-            <GridItem>C7</GridItem>
-            <GridItem>C8</GridItem>
-            <GridItem>C9</GridItem>
-            <GridItem>C10</GridItem>
-            <GridItem>C11</GridItem>
-            <GridItem>C12</GridItem>
-          </Grid>
-        </Container>
+        {/* Hero Search */}
+        <h1>Hero w/ Searchbar Component</h1>
+        {/* Section Options */}
+        <h1>Popular Projects/Repos</h1>
+        Next | Bootstrap | freeCodeCamp | You-Dont-Know-JS
+        {/* https://www.freecodecamp.org/news/the-10-github-repos-people-mention-the-most-in-freecodecamps-main-chat-room-189750600fa4/ */}
+        <h1>Developed By Cards:</h1>
+        {/* https://stripe.com/ lifting cards section*/}
+        <h1>Github Docs</h1>
+        {/* https://stripe.com/ right below lifting card section*/}
+        <h1>Footer</h1>
+        {/* <Footer></Footer> */}
       </Fragment>
     );
   }
