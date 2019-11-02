@@ -64,6 +64,7 @@ The grid system in this project is a **Mobile First** system that utilizes CSS G
         rows: 'string' (optional)
         columnGap: number (optional) <--- gaps are multiplied by the baseUnit in _theme.js
         rowGap: number (optional) <--- gaps are caulated by the baseUnit in _theme.js
+        areas: '"area area area" "other other other"' (optional)
       }
     }}
   >...</Grid>
@@ -92,6 +93,12 @@ Breakpoints are defined in the `/components/_theme.js` file.
 TODO: Need to have nested structure for GridItems
 
 `<GridItem>` is an optional component in the grouping and allows you to define content alignment.
+
+```
+  <GridItem
+    gridArea=String (Optional)
+  >
+```
 
 ### Avatar
 
