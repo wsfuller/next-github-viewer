@@ -3,8 +3,12 @@ import React, { Component, Fragment } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
-import { Container, Row, GridItem, Grid } from '../components/Grid';
+import { TypographyExample, GridExample } from '../components/KitchenSinkExamples';
+
+import Avatar from '../components/Avatar';
+import Typography from '../components/Typography';
 import SearchBar from '../components/Search/SearchBar';
+import { Container, Row, GridItem, Grid } from '../components/Grid';
 
 const KitchenSink = () => (
   <Fragment>
@@ -12,48 +16,51 @@ const KitchenSink = () => (
       <title>Kitchen Sink</title>
     </Head>
     <Container>
+      <Typography variant="h1">Kitchen Sink</Typography>
+      <Typography variant="body1">
+        The Kitchen Sink contains all components for this application
+      </Typography>
+    </Container>
+    <TypographyExample />
+    <GridExample />
+
+    <Container>
       <Grid
         template={{
           base: {
-            columns: 'repeat(4, 1fr)',
-            rows: '30px 60px 120px',
-            columnGap: 1,
-            rowGap: 1
-          },
-          small: {
-            columns: 'repeat(4, 1fr)',
-            columnGap: 2,
-            rowGap: 2
-          },
-          medium: {
-            columns: 'repeat(4, 1fr)',
-            columnGap: 4,
-            rowGap: 4
-          },
-          large: {
-            columns: 'repeat(4, 1fr)',
-            columnGap: 8,
-            rowGap: 8
-          },
-          xLarge: {
-            columns: 'repeat(4, 1fr)',
-            columnGap: 16,
-            rowGap: 16
+            areas: '"header header header header" "main main.sidebar"'
           }
         }}
       >
-        <GridItem gridColumnStart={2}>C1</GridItem>
-        <GridItem>C2</GridItem>
-        <GridItem>C3</GridItem>
-        <GridItem>C4</GridItem>
-        <GridItem>C5</GridItem>
-        <GridItem>C6</GridItem>
-        <GridItem>C7</GridItem>
-        <GridItem>C8</GridItem>
-        <GridItem>C9</GridItem>
-        <GridItem>C10</GridItem>
-        <GridItem>C11</GridItem>
-        <GridItem>C12</GridItem>
+        <GridItem gridArea="header">
+          <Typography variant="h1">Avatar</Typography>
+        </GridItem>
+        <GridItem gridArea="main">
+          <Grid
+            template={{
+              base: {
+                columns: 'repeat(4, 1fr)',
+                rows: 'auto',
+                columnGap: 1,
+                rowGap: 1
+              }
+            }}
+          >
+            <Avatar source="http://placehold.it/300x300" htmlAttributes={{ alt: 'placeholder' }} />
+            <Avatar source="http://placehold.it/300x300" htmlAttributes={{ alt: 'placeholder' }} />
+            <Avatar source="http://placehold.it/300x300" htmlAttributes={{ alt: 'placeholder' }} />
+            <Avatar source="http://placehold.it/300x300" htmlAttributes={{ alt: 'placeholder' }} />
+            <Avatar source="http://placehold.it/300x300" htmlAttributes={{ alt: 'placeholder' }} />
+            <Avatar source="http://placehold.it/300x300" htmlAttributes={{ alt: 'placeholder' }} />
+            <Avatar source="http://placehold.it/300x300" htmlAttributes={{ alt: 'placeholder' }} />
+            <Avatar source="http://placehold.it/300x300" htmlAttributes={{ alt: 'placeholder' }} />
+            <Avatar source="http://placehold.it/300x300" htmlAttributes={{ alt: 'placeholder' }} />
+            <Avatar source="http://placehold.it/300x300" htmlAttributes={{ alt: 'placeholder' }} />
+            <Avatar source="http://placehold.it/300x300" htmlAttributes={{ alt: 'placeholder' }} />
+            <Avatar source="http://placehold.it/300x300" htmlAttributes={{ alt: 'placeholder' }} />
+          </Grid>
+        </GridItem>
+        <GridItem gridArea="sidebar">Sidebar</GridItem>
       </Grid>
     </Container>
   </Fragment>

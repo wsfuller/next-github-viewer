@@ -37,6 +37,10 @@ export const StyledGrid = styled.div`
       css`
         justify-items: ${template.base.justifyItems};
       `}
+    ${template.base.areas &&
+      css`
+        grid-template-areas: ${template.base.areas};
+      `}
     ${'' /* Responsive Breakpoints */}
     ${template.small && gridBreakpoint(breakpoints.small, template, 'small')}
     ${template.medium && gridBreakpoint(breakpoints.medium, template, 'medium')}
@@ -47,6 +51,15 @@ export const StyledGrid = styled.div`
 
 export const StyledGridItem = styled.div`
   display: grid;
-  background: blue;
-  color: white;
+  ${({ demo, gridArea }) => css`
+    ${!!demo &&
+      css`
+        background: blue;
+        color: white;
+      `}
+    ${gridArea &&
+      css`
+        grid-area: ${gridArea};
+      `}
+  `}
 `;
