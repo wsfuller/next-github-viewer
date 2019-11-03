@@ -3,7 +3,13 @@ import React, { Component, Fragment } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
-import { TypographyExample, GridExample, AvatarExample } from '../components/KitchenSinkExamples';
+import {
+  TypographyExample,
+  GridExample,
+  AvatarExample,
+  ListExample,
+  StatExample
+} from '../components/KitchenSinkExamples';
 
 import Typography from '../components/Typography';
 import SearchBar from '../components/Search/SearchBar';
@@ -23,6 +29,8 @@ const KitchenSink = () => (
     <TypographyExample />
     <GridExample />
     <AvatarExample />
+    <ListExample />
+    <StatExample />
   </Fragment>
 );
 
