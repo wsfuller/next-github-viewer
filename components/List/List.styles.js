@@ -19,9 +19,13 @@ const StyledListItem = styled.li`
     }
   `}
 
-  :hover {
-    background: ${({ theme }) => theme.variables.colors.primary.light};
-  }
+  ${({ hover, theme }) =>
+    hover &&
+    css`
+      :hover {
+        background: ${({ theme }) => theme.variables.colors.primary.light};
+      }
+    `}
 
   a {
     text-decoration: none;

@@ -14,7 +14,7 @@ const SearchResults = ({ results }) => {
     return (
       <List>
         {results.items.map(item => (
-          <ListItem key={item.id} striped>
+          <ListItem key={item.id} striped hover>
             <Link href={`/user/${item.id}`}>
               <Avatar source={item.avatar_url} htmlAttributes={{ alt: `${item.login} avatar` }} />
               <Typography variant="body1">{item.login}</Typography>

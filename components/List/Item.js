@@ -9,11 +9,13 @@ const ListItem = ({ children, ...props }) => {
 };
 
 ListItem.propTypes = {
-  striped: PropTypes.bool
+  striped: PropTypes.bool,
+  hover: PropTypes.bool
 };
 
 ListItem.defaultProps = {
-  striped: false
+  striped: false,
+  hover: false
 };
 
 export default ListItem;
