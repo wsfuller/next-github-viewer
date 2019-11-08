@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 
 import Link from 'next/link';
 import Head from 'next/head';
+import { IoIosMenu } from 'react-icons/io';
 
 import { Container, Row, GridItem, Grid } from '../components/Grid';
 import SearchBar from '../components/Search/SearchBar';
@@ -25,7 +26,9 @@ class Home extends Component {
           <a>Profile page</a>
         </Link>
         {/* <Header></Header> */}
-        <h1>Header</h1>
+        <h1>
+          Header <IoIosMenu />
+        </h1>
         <SearchBar />
         {/* Hero Search */}
         <h1>Hero w/ Searchbar Component</h1>
