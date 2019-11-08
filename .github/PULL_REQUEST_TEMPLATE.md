@@ -25,7 +25,7 @@
 
 <!-- Place x for all that apply  -->
 
-- [] Update and or refactor, non-breaking
-- [] Bug fix, non-breaking
-- [] New feature, non-breaking
-- [] Breaking change
+- [ ] Update and or refactor, non-breaking
+- [ ] Bug fix, non-breaking
+- [ ] New feature, non-breaking
+- [ ] Breaking change
