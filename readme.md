@@ -55,6 +55,10 @@ Components are built in a dedicated directory with the following minimum file st
   - `__snapshots__`
   - `ComponentName.styles.helpers.js`
 
+### Icons
+
+This project uses [react-icons](https://www.npmjs.com/package/react-icons). For UI elements preferred icon set is [Ionicons](https://react-icons.netlify.com/#/icons/io)
+
 ### Grid System
 
 The grid system follows a hierarchy of `<Container />` > `<Grid />` > `<GridItem />`. The Grid System is based off [CSS Grids](https://css-tricks.com/snippets/css/complete-guide-grid/)
