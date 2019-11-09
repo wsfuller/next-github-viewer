@@ -75,9 +75,9 @@ const variables = {
     }
   },
   transitions: {
-    default: 0.5,
-    fast: 0.25,
-    slow: 1
+    default: '0.5s',
+    fast: '0.25s',
+    slow: '1s'
   }
 };
 
