@@ -23,7 +23,7 @@ const AppBarMenuStyles = {
     width: ${pxToRem(280)};
     overflow: hidden;
     ${({ theme: { variables } }) => `
-      background: ${variables.colors.primary.light}
+      background: ${variables.colors.primary.dark}
       transition: transform ${variables.transitions.fast} ease-in-out
     `}
     z-index: 10000;
