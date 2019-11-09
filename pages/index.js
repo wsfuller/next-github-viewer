@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { IoIosMenu } from 'react-icons/io';
 
 import { Container, Row, GridItem, Grid } from '../components/Grid';
+import AppBar from '../components/AppBar';
 import SearchBar from '../components/Search/SearchBar';
 
 class Home extends Component {
@@ -22,13 +23,8 @@ class Home extends Component {
         <Head>
           <title>Home</title>
         </Head>
-        <Link href="/profile">
-          <a>Profile page</a>
-        </Link>
-        {/* <Header></Header> */}
-        <h1>
-          Header <IoIosMenu />
-        </h1>
+        <AppBar />
+        <h1>Header</h1>
         <SearchBar />
         {/* Hero Search */}
         <h1>Hero w/ Searchbar Component</h1>
