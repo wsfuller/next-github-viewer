@@ -78,6 +78,25 @@ const variables = {
     default: '0.5s',
     fast: '0.25s',
     slow: '1s'
+  },
+  zIndex: {
+    one: 10,
+    two: 20,
+    three: 30,
+    four: 40,
+    five: 50,
+    six: 60,
+    seven: 70,
+    eight: 80,
+    nine: 90,
+    ten: 100,
+    eleven: 1100,
+    twelve: 1200,
+    thirteen: 1300,
+    fourteen: 1400,
+    fifteen: 1500,
+    twenty: 2000,
+    thirty: 3000
   }
 };
 
