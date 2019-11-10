@@ -3,7 +3,7 @@ import { pxToRem } from '../_theme';
 
 export const StyledAppBar = styled.div`
   width: 100%;
-  height: ${pxToRem(45)};
+  height: ${pxToRem(64)};
   ${({
     theme: {
       variables: { colors }
@@ -12,6 +12,37 @@ export const StyledAppBar = styled.div`
     color: ${colors.grayScale.white};
     background: ${colors.primary.default};
   `};
+`;
+
+const DefaultAppBarButton = styled.button`
+  display: grid;
+  width: ${pxToRem(40)};
+  height: ${pxToRem(40)};
+  background: transparent;
+  font-size: ${pxToRem(24)};
+  border: none;
+  color: ${({ theme }) => theme.variables.colors.grayScale.white};
+  ${({ theme: { borderRadius, variables } }) => `
+      transition: background ${variables.transitions.fast} ease-in-out;
+      border-radius: ${borderRadius.small};
+    `}
+  &:focus {
+    outline: 0;
+  }
+`;
+
+export const StyledAppBarMenuButton = styled.button`
+  ${DefaultAppBarButton};
+  &:hover {
+    background: ${({ theme }) => theme.variables.colors.primary.dark};
+  }
+`;
+
+export const StyledAppBarButton = styled.button`
+  ${DefaultAppBarButton}
+  &:hover {
+    background: ${({ theme }) => theme.variables.colors.primary.dark};
+  }
 `;
 
 const AppBarMenuStyles = {

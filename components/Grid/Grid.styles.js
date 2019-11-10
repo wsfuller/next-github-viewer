@@ -4,6 +4,14 @@ import { pxToRem } from '../_theme';
 
 export const StyledContainer = styled.div`
   width: 100%;
+  display: grid;
+  ${({ fullHeight }) =>
+    css`
+      ${fullHeight &&
+        css`
+          height: 100%;
+        `}
+    `}
   margin-left: auto;
   margin-right: auto;
   padding-left: ${({ theme }) => pxToRem(theme.variables.baseUnit * 2)};
@@ -36,6 +44,14 @@ export const StyledGrid = styled.div`
     ${template.base.justifyItems &&
       css`
         justify-items: ${template.base.justifyItems};
+      `}
+    ${template.base.alignContent &&
+      css`
+        align-content: ${template.base.alignContent};
+      `}
+    ${template.base.alignItems &&
+      css`
+        align-items: ${template.base.alignItems};
       `}
     ${template.base.areas &&
       css`

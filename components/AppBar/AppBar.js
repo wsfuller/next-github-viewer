@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 
 import { IoIosMenu } from 'react-icons/io';
 
-import { Container } from '../Grid';
-import { StyledAppBar } from './AppBar.styles';
+import { pxToRem } from '../_theme';
+import { Container, Grid } from '../Grid';
+import { StyledAppBar, StyledAppBarButton } from './AppBar.styles';
 import AppBarMenu from './AppBarMenu';
 
 const AppBar = () => {
@@ -12,11 +13,25 @@ const AppBar = () => {
 
   return (
     <StyledAppBar>
-      <Container>
-        <button onClick={() => toggleMenu()}></button>
-        <IoIosMenu />
-        App Bar fdas
-        <AppBarMenu menu={showMenu}>Our menu</AppBarMenu>
+      <Container fullHeight>
+        <Grid
+          template={{
+            base: {
+              columns: `${pxToRem(40)} 1fr ${pxToRem(40)}`,
+              columnGap: 1,
+              alignItems: 'center'
+            }
+          }}
+        >
+          <StyledAppBarButton onClick={() => toggleMenu()}>
+            <IoIosMenu />
+          </StyledAppBarButton>
+          App Bar fdas
+        </Grid>
+
+        <AppBarMenu menu={showMenu} toggleMenu={toggleMenu}>
+          Our menu
+        </AppBarMenu>
       </Container>
     </StyledAppBar>
   );
