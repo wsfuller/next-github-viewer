@@ -51,23 +51,33 @@ export const StyledAppBarButton = styled.button`
   }
 `;
 
-const AppBarMenuStyles = {
-  default: css`
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: ${pxToRem(280)};
-    overflow: hidden;
-    ${({ theme: { variables } }) => `
-      background: ${variables.colors.primary.dark}
-      transition: transform ${variables.transitions.fast} ease-in-out
-    `}
-    z-index: 10000;
-  `
-};
+export const StyledAppBarMenuOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  visibility: ${props => (props.showMenu ? 'visible' : 'hidden')};
+  opacity: ${props => (props.showMenu ? '1' : '0')};
+  transition: visibility 0.25s, opacity 0.25s ease-in-out;
+  background: rgba(0, 0, 0, 0.75);
+`;
 
 export const StyledAppBarMenu = styled.div`
-  ${AppBarMenuStyles.default};
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: ${pxToRem(280)};
+  overflow: hidden;
+  ${({ theme: { variables } }) => `
+      background: ${variables.colors.grayScale.white}
+      transition: transform ${variables.transitions.fast} ease-in-out
+    `}
+  z-index: 10000;
+  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14),
+    0px 6px 30px 5px rgba(0, 0, 0, 0.12);
   transform: ${props => (props.showMenu ? 'translateX(0%)' : 'translateX(-100%)')};
 `;
