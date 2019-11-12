@@ -107,6 +107,10 @@ export const theme = {
     small: pxToRem(variables.baseUnit),
     large: pxToRem(variables.baseUnit * 3)
   },
+  appBar: {
+    default: pxToRem(variables.baseUnit * 8),
+    condensed: pxToRem(variables.baseUnit * 6)
+  },
   section: {
     paddingTop: pxToRem(40),
     paddingBottom: pxToRem(40)
