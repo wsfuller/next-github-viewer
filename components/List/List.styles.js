@@ -9,7 +9,7 @@ const StyledList = styled.ul`
 const StyledListItem = styled.li`
   text-decoration: none;
   padding: ${pxToRem(8)};
-  transition: ${({ theme }) => `all ${theme.variables.transitions.default}s ease-in-out`};
+  transition: ${({ theme }) => `all ${theme.variables.transitions.default} ease-in-out`};
 
   ${({ striped, theme }) =>
     striped &&
