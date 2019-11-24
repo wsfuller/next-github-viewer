@@ -1,4 +1,4 @@
 import List from './List';
-import ListItem from './Item';
+import ListItem from './ListItem';
 
 export { List, ListItem };

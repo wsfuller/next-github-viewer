@@ -7,6 +7,8 @@ const StyledList = styled.ul`
 `;
 
 const StyledListItem = styled.li`
+  display: grid;
+  align-items: center;
   text-decoration: none;
   padding: ${pxToRem(8)};
   transition: ${({ theme }) => `all ${theme.variables.transitions.default} ease-in-out`};
@@ -29,6 +31,10 @@ const StyledListItem = styled.li`
 
   a {
     text-decoration: none;
+  }
+
+  a p {
+    margin-bottom: 0;
   }
 `;
 
