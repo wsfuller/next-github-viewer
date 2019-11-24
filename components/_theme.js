@@ -11,14 +11,19 @@ const variables = {
   },
   colors: {
     primary: {
-      default: '#8E1CFA',
-      light: '#CB9FF8',
-      dark: '#6610BD'
+      default: '#8e1cfa',
+      light: '#cb9ff8',
+      dark: '#6610bd'
+    },
+    secondary: {
+      default: '#62b1ea',
+      dark: '#4e2aec',
+      light: '#7491a3'
     },
     grayScale: {
       white: '#ffffff',
       grayOne: '#f4f4f4',
-      grayTwo: '#666666',
+      grayTwo: '#e5e9e8',
       grayThree: '#333333',
       grayFour: '#303030',
       grayFive: '#212121',
