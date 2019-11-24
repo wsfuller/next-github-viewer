@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 
 import Head from 'next/head';
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
 
 import { Container, Row, GridItem, Grid } from '../components/Grid';
 import SearchBar from '../components/Search/SearchBar';

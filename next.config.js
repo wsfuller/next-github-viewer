@@ -1,2 +1,5 @@
+const withCss = require('@zeit/next-css');
 const withImages = require('next-images');
-module.exports = withImages();
+const withPlugins = require('next-compose-plugins');
+
+module.exports = withPlugins([withImages, withCss]);
