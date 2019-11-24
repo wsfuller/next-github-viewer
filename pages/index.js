@@ -1,10 +1,8 @@
 import React, { Component, Fragment } from 'react';
 
-import Link from 'next/link';
 import Head from 'next/head';
 
 import { Container, Row, GridItem, Grid } from '../components/Grid';
-import AppBar from '../components/AppBar';
 import SearchBar from '../components/Search/SearchBar';
 import SectionHeader from '../components/SectionHeader';
 
@@ -23,7 +21,7 @@ class Home extends Component {
         <Head>
           <title>Home</title>
         </Head>
-        <AppBar />
+
         <SearchBar />
         {/* Hero Search */}
         <h1>Hero w/ Searchbar Component</h1>
@@ -47,8 +45,6 @@ class Home extends Component {
             {/* https://stripe.com/ right below lifting card section*/}
           </Container>
         </section>
-        <h1>Footer</h1>
-        {/* <Footer></Footer> */}
       </Fragment>
     );
   }
