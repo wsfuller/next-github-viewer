@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
 
 import Head from 'next/head';
-import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/styles.css';
 
 import { Container, Row, GridItem, Grid } from '../components/Grid';
+import { HeroCarousel } from '../components/Hero';
+import { StyledHeroSearch } from '../components/Hero/Hero.styles';
 import SearchBar from '../components/Search/SearchBar';
 import SectionHeader from '../components/SectionHeader';
 
@@ -23,11 +23,11 @@ class Home extends Component {
         <Head>
           <title>Home</title>
         </Head>
+        <StyledHeroSearch>
+          <SearchBar />
+          <HeroCarousel />
+        </StyledHeroSearch>
 
-        <SearchBar />
-        {/* Hero Search */}
-        <h1>Hero w/ Searchbar Component</h1>
-        {/* Section Options */}
         <section>
           <Container>
             <SectionHeader title="Popular Projects" />
