@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { Container, Row, GridItem, Grid } from '../components/Grid';
 import SearchBar from '../components/Search/SearchBar';
 import SectionHeader from '../components/SectionHeader';
+import Button from '../components/Button';
 
 class Home extends Component {
   constructor(props) {
@@ -26,6 +27,11 @@ class Home extends Component {
         {/* Hero Search */}
         <h1>Hero w/ Searchbar Component</h1>
         {/* Section Options */}
+        <section>
+          <Container>
+            <Button htmlAttributes={{width: 100}}>Follow</Button>
+          </Container>
+        </section>
         <section>
           <Container>
             <SectionHeader title="Popular Projects" />
