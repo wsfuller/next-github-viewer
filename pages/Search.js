@@ -23,10 +23,15 @@ const SearchPage = ({ searchResults }) => {
 };
 
 SearchPage.getInitialProps = async ({ req, query }) => {
-  const { q } = query;
-  const res = await fetch(`https://api.github.com/search/users?q=${query.q}&per_page=10`);
-  const json = await res.json();
-  return { searchResults: json };
+  try {
+    const { q } = query;
+    const res = await fetch(`https://api.github.com/search/users?q=${query.q}&per_page=10`);
+    const json = await res.json();
+    return { searchResults: json };
+  } catch (error) {
+    console.warn('There was an error fetching data: ', error);
+    return { searchResults: { error: error } };
+  }
 };
 
 export default SearchPage;

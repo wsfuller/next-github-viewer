@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 import styled from 'styled-components';
 
 import Avatar from '../Avatar';
@@ -7,9 +7,14 @@ import Typography from '../Typography';
 import Link from '../Link';
 
 const SearchResults = ({ results }) => {
-  console.log(results);
-  if (results.items.length === 0) {
-    return <Typography variant="h1">Sorry no results were found</Typography>;
+  if (!results.items && results.error) {
+    return <Typography variant="h1">Error fetching results</Typography>;
+  } else if (!results.items || results.items.length < 1) {
+    return (
+      <Fragment>
+        <Typography variant="h1">Sorry no results were found</Typography>
+      </Fragment>
+    );
   } else {
     return (
       <List>
