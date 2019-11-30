@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { pxToRem } from '../_theme';
+import { pxToRem, theme } from '../_theme';
 
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
@@ -7,9 +7,8 @@ import withAutoplay from 'react-awesome-slider/dist/autoplay';
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
-export const StyledHeroCarousel = styled(AutoplaySlider)`
-  ${({ theme }) => css`
-    position: relative;
+const heroStyles = {
+  default: css`
     height: 35vh;
 
     @media screen and (min-width: ${theme.variables.breakpoints.medium}px) {
@@ -19,6 +18,13 @@ export const StyledHeroCarousel = styled(AutoplaySlider)`
     @media screen and (min-width: ${theme.variables.breakpoints.xLarge}px) {
       height: ${pxToRem(700)};
     }
+  `
+};
+
+export const StyledHeroCarousel = styled(AutoplaySlider)`
+  ${heroStyles.default};
+  ${({ theme }) => css`
+    position: relative;
 
     &::after {
       content: '';
@@ -36,6 +42,7 @@ export const StyledHeroCarousel = styled(AutoplaySlider)`
 `;
 
 export const StyledHeroSearch = styled.div`
+  ${heroStyles.default};
   ${({ theme }) => css`
     position: relative;
     margin-bottom: ${pxToRem(theme.variables.baseUnit * 3)};

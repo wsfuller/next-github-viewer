@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 import { Container } from '../components/Grid';
+import { Hero } from '../components/Hero';
 import SearchBar from '../components/Search/SearchBar';
 import SearchResults from '../components/Search/Results';
 
@@ -13,6 +14,7 @@ const SearchPage = ({ searchResults }) => {
       <Head>
         <title>Next GitHub Viewer | Search Results</title>
       </Head>
+      <Hero title="Search Results" />
 
       <SearchBar />
       <Container>
