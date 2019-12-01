@@ -10,21 +10,21 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 const heroStyles = {
   default: css`
     height: 35vh;
+    color: ${theme.variables.colors.grayScale.white};
+    background: ${theme.variables.colors.primary.default};
+    background: linear-gradient(
+      to right,
+      ${theme.variables.colors.secondary.default},
+      ${theme.variables.colors.primary.default}
+    );
 
     @media screen and (min-width: ${theme.variables.breakpoints.medium}px) {
-      height: ${pxToRem(500)};
+      height: ${pxToRem(250)};
     }
 
     @media screen and (min-width: ${theme.variables.breakpoints.xLarge}px) {
-      height: ${pxToRem(700)};
+      height: ${pxToRem(300)};
     }
-  `
-};
-
-export const StyledHeroCarousel = styled(AutoplaySlider)`
-  ${heroStyles.default};
-  ${({ theme }) => css`
-    position: relative;
 
     &::after {
       content: '';
@@ -35,15 +35,21 @@ export const StyledHeroCarousel = styled(AutoplaySlider)`
       right: 0;
       bottom: 0;
       left: 0;
-      z-index: 10;
-      background: rgba(0, 0, 0, 0.4);
+      z-index: ${theme.variables.zIndex.one};
     }
+  `
+};
+
+export const StyledHeroCarousel = styled(AutoplaySlider)`
+  ${heroStyles.default};
+  ${({ theme }) => css`
+    position: relative;
   `}
 `;
 
-export const StyledHeroSearch = styled.div`
+export const StyledHero = styled.div`
   ${heroStyles.default};
-  ${({ theme }) => css`
+  ${({ theme, dividerOpacity }) => css`
     position: relative;
     margin-bottom: ${pxToRem(theme.variables.baseUnit * 3)};
     form {
@@ -55,7 +61,19 @@ export const StyledHeroSearch = styled.div`
       text-align: center;
       z-index: 100;
     }
+
+    &::after {
+      background: rgba(0, 0, 0, ${dividerOpacity});
+    }
   `}
 `;
 
-export const StyledHero = styled.div``;
+export const StyledHeroContent = styled.div`
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  padding: 0 ${pxToRem(theme.variables.baseUnit * 2)};
+  z-index: ${theme.variables.zIndex.two};
+`;

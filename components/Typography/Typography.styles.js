@@ -5,7 +5,7 @@ const { variables } = theme;
 
 const headerStyles = {
   default: css`
-    color: ${variables.colors.primary.dark};
+    color: ${props => (props.color ? props.color : variables.colors.primary.dark)};
     font-family: ${variables.typography.headers.family};
     font-weight: ${variables.typography.headers.weights.bold};
   `

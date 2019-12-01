@@ -4,7 +4,7 @@ import Head from 'next/head';
 
 import { Container, Row, GridItem, Grid } from '../components/Grid';
 import { HeroCarousel } from '../components/Hero';
-import { StyledHeroSearch } from '../components/Hero/Hero.styles';
+import { StyledHero } from '../components/Hero/Hero.styles';
 import SearchBar from '../components/Search/SearchBar';
 import SectionHeader from '../components/SectionHeader';
 
@@ -23,10 +23,10 @@ class Home extends Component {
         <Head>
           <title>Home</title>
         </Head>
-        <StyledHeroSearch>
+        <StyledHero dividerOpacity={0.4}>
           <SearchBar />
           <HeroCarousel />
-        </StyledHeroSearch>
+        </StyledHero>
 
         <section>
           <Container>

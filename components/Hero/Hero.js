@@ -1,18 +1,26 @@
 import PropTypes from 'prop-types';
 
-import { StyledHeroSearch } from './Hero.styles';
-import { Container } from '../Grid';
+import { StyledHero, StyledHeroContent } from './Hero.styles';
+import { Container, Grid } from '../Grid';
+import Typography from '../Typography';
+import { theme } from '../_theme';
 
-const Hero = ({ title }) => (
-  <StyledHeroSearch>
-    <Container>
-      <h1>{title}</h1>
-    </Container>
-  </StyledHeroSearch>
+const Hero = ({ dividerOpacity, title }) => (
+  <StyledHero dividerOpacity>
+    <StyledHeroContent>
+      <Typography variant="h2" color={theme.variables.colors.primary.light}>
+        {title}
+      </Typography>
+    </StyledHeroContent>
+  </StyledHero>
 );
 
 Hero.propTypes = {
   title: PropTypes.string.isRequired
+};
+
+Hero.defaultProps = {
+  dividerOpacity: 0.6
 };
 
 export default Hero;
