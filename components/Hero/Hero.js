@@ -6,7 +6,7 @@ import Typography from '../Typography';
 import { theme } from '../_theme';
 
 const Hero = ({ dividerOpacity, title }) => (
-  <StyledHero dividerOpacity>
+  <StyledHero dividerOpacity={dividerOpacity}>
     <StyledHeroContent>
       <Typography variant="h2" color={theme.variables.colors.primary.light}>
         {title}
@@ -16,7 +16,8 @@ const Hero = ({ dividerOpacity, title }) => (
 );
 
 Hero.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  dividerOpacity: PropTypes.number
 };
 
 Hero.defaultProps = {
