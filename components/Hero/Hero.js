@@ -28,7 +28,7 @@ Hero.propTypes = {
 };
 
 Hero.defaultProps = {
-  children: {},
+  children: null,
   title: '',
   dividerOpacity: 0.6
 };
