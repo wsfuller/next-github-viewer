@@ -177,3 +177,16 @@ Typography encapsulates all font that will be used in the applciation. You must 
     {children}
   </Typography>
 ```
+
+### Hero
+
+Hero is the primary portion on top of the screen when implemented. The `Hero` can accept either a `title` or `children`.
+
+```
+  <Hero
+    dividerOpacity=Number <--- configures the &::after background which sits between the hero background and the hero content
+    title=String <--- Adds title text front and center of the Hero
+  >
+    {children}
+  </Hero>
+```
