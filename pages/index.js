@@ -3,6 +3,7 @@ import React, { Component, Fragment } from 'react';
 import Head from 'next/head';
 
 import { Container, Row, GridItem, Grid } from '../components/Grid';
+import { Hero, HeroCarousel } from '../components/Hero';
 import SearchBar from '../components/Search/SearchBar';
 import SectionHeader from '../components/SectionHeader';
 
@@ -21,11 +22,11 @@ class Home extends Component {
         <Head>
           <title>Home</title>
         </Head>
+        <Hero dividerOpacity={0.4}>
+          <SearchBar />
+          <HeroCarousel />
+        </Hero>
 
-        <SearchBar />
-        {/* Hero Search */}
-        <h1>Hero w/ Searchbar Component</h1>
-        {/* Section Options */}
         <section>
           <Container>
             <SectionHeader title="Popular Projects" />
