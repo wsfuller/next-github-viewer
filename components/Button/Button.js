@@ -8,7 +8,6 @@ const Button = ({children, url, htmlAttributes }) => (
 );
 
 Button.propTypes = {
-  source: PropTypes.string.isRequired,
   htmlAttributes: PropTypes.shape({
     width: PropTypes.number,
     height: PropTypes.number,

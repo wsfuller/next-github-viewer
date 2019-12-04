@@ -1,15 +1,22 @@
 import styled, { css } from 'styled-components';
 import { pxToRem } from '../_theme';
 
-const StyledButton = styled.button`
-  background: linear-gradient(to left,${props => props.theme.variables.colors.primary.default} 50%,${props => props.theme.variables.colors.secondary.default});
-  border-radius: ${props => props.theme.borderRadius.small};
-  color: ${props => props.theme.variables.colors.grayScale.white};
-  display: inline-block;
-  font-size: ${pxToRem(16)};  
-  height: auto;  
-  width: ${props => (props.attributes.width ? pxToRem(props.attributes.width) : pxToRem(50))};
-  margin-right: ${pxToRem(8)};
-  `;
 
-export default StyledButton;
+const buttonStyles = {
+  default: css `
+    background: linear-gradient(
+      to left,
+      ${theme.variables.colors.primary.default} 50%,
+      ${theme.variables.colors.secondary.default}
+    );
+    border-radius: ${theme.borderRadius.small};
+    color: ${theme.variables.colors.grayScale.white};
+    display: inline-block;
+    height: auto;
+    margin-right: ${pxToRem(8)};
+    width: ${attributes.width ? pxToRem(attributes.width) : pxToRem(50)};
+  `
+};
+
+
+export default buttonStyles;
