@@ -7,7 +7,7 @@ import Button from '../Button';
 const ButtonExample = () => (
   <Container>
     <Typography variant="h1">Button</Typography>
-    <Button as={button} htmlAttributes={{width: 100}}>Follow</Button>
+    <Button as={styledButton} htmlAttributes={{width: 100}}>Follow</Button>
   </Container>
 );
 
