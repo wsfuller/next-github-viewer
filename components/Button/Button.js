@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import StyledButton from './Button.styles';
+import styledButton from './Button.styles';
 
 const Button = ({children, url, htmlAttributes }) => (
-  <StyledButton src={url} attributes={htmlAttributes} >{children}</StyledButton>
+  <styledButton src={url} attributes={htmlAttributes} >{children}</styledButton>
 );
 
 Button.propTypes = {
