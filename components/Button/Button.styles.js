@@ -26,7 +26,7 @@ export const styledButton = styled.button`
   `}
 `;
 
-export const styledLink = styled.a`
+export const styledButtonLink = styled.a`
   ${buttonStyles.default};
   ${({theme}) => css`
     color: ${theme.variables.colors.primary.dark};
