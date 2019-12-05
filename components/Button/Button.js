@@ -1,24 +1,19 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import {styledButton, styledLink} from './Button.styles';
+import { StyledButton, StyledButtonLink } from './Button.styles';
 
-const linkTypes = {
-  button: styledButton,
-  link: styledLink
+const Button = ({ text, variant }) => {
+  if (variant === 'link') {
+    return <StyledLinkButton href={href}>{text}</StyledLinkButton>;
+  } else {
+    return <StyledButton type={submit}>{text}</StyledButton>;
+  }
 };
-
-const Button = ({children, url, htmlAttributes, ...props }) => (
-
-  const ButtonLink = linkTypes[props.as];
-
-  <ButtonLink {...props} src={url} attributes={htmlAttributes} >{children}</ButtonLink>
-);
-
 Button.propTypes = {
   htmlAttributes: PropTypes.shape({
     width: PropTypes.number,
-    height: PropTypes.number,
+    height: PropTypes.number
   })
 };
 
