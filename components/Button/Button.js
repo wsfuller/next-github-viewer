@@ -1,10 +1,18 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import styledButton from './Button.styles';
+import {styledButton, styledLink} from './Button.styles';
 
-const Button = ({children, url, htmlAttributes }) => (
-  <styledButton src={url} attributes={htmlAttributes} >{children}</styledButton>
+const linkTypes = {
+  button: styledButton,
+  link: styledLink
+};
+
+const Button = ({children, url, htmlAttributes, ...props }) => (
+
+  const ButtonLink = linkTypes[props.as];
+
+  <ButtonLink {...props} src={url} attributes={htmlAttributes} >{children}</ButtonLink>
 );
 
 Button.propTypes = {

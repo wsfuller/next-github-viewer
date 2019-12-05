@@ -32,7 +32,7 @@ const KitchenSink = () => (
     <AvatarExample />
     <ListExample />
     <StatExample />
-    <ButtonExample />
+    <ButtonExample/>
   </Fragment>
 );
 

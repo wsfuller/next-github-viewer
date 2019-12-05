@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { pxToRem } from '../_theme';
+import Link from 'next/link';
 
 
 const buttonStyles = {
@@ -10,7 +11,7 @@ const buttonStyles = {
   `
 };
 
-export const styledButton = styled.a`
+export const styledButton = styled.button`
   ${buttonStyles.default};
   ${({theme}) => css`
     background: linear-gradient(
