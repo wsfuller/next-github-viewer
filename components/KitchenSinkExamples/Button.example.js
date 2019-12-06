@@ -7,7 +7,9 @@ import Button from '../Button';
 const ButtonExample = () => (
   <Container>
     <Typography variant="h1">Button</Typography>
-    <Button as={styledButton} htmlAttributes={{width: 100}}>Follow</Button>
+    <Button variant="link" href="http://www.google.com" htmlAttributes={{width: 100}} text="Follow"></Button>
+    <Button variant="button" type="sumbit" htmlAttributes={{width: 100}} text="Follow"></Button>
+
   </Container>
 );
 
