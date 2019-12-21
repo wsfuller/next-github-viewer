@@ -58,6 +58,15 @@ class Application extends App {
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="theme-color" content="#ffffff"></meta>
         </Head>
+        <style jsx global>
+          {`
+            html,
+            body,
+            #__next {
+              height: 100%;
+            }
+          `}
+        </style>
         <ThemeProvider theme={theme}>
           <Layout>
             <Component {...pageProps} />
