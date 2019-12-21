@@ -1,5 +1,4 @@
-import styled, { css } from 'styled-components';
-import { pxToRem } from '../_theme';
+import styled from 'styled-components';
 
 const StyledLayout = styled.div`
   display: grid;
