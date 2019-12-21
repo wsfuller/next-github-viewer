@@ -1,14 +1,13 @@
-import { Fragment } from 'react';
-
+import StyledLayout from './Layout.styles';
 import AppBar from '../AppBar';
+import Footer from '../Footer';
 
 const Layout = ({ children }) => (
-  <Fragment>
+  <StyledLayout>
     <AppBar />
-    {children}
-    <h1>Footer</h1>
-    {/* <Footer></Footer> */}
-  </Fragment>
+    <div>{children}</div>
+    <Footer />
+  </StyledLayout>
 );
 
 export default Layout;
