@@ -7,6 +7,8 @@ import { Hero, HeroCarousel } from '../components/Hero';
 import SearchBar from '../components/Search/SearchBar';
 import Section from '../components/Section';
 
+import getPopularProjects from '../common/getPopularProjects';
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +18,7 @@ class Home extends Component {
   }
 
   render() {
-    const { stars } = this.props;
+    console.log('index page props: ', this.props);
     return (
       <Fragment>
         <Head>
@@ -52,18 +54,8 @@ class Home extends Component {
 }
 
 Home.getInitialProps = async ({ req }) => {
-  const baseUrl = 'https://api.github.com/repos';
-  // Visual Code, Free code camp, Bootstrap, React
-  const visualStudioCode = await fetch(`${baseUrl}/microsoft/vscode`);
-  const bootstrap = await fetch(`${baseUrl}/microsoft/vscode`);
-  const freeCodeCamp = await fetch(`${baseUrl}/freeCodeCamp/freeCodeCamp`);
-  const react = await fetch(`${baseUrl}/facebook/react`);
-  // try {
-  //   const nextJS = await fetch('https://api.github.com/repos/zeit/next.js');
-  //   const
-  //   const json = await res.json();
-  // }
-  // return { stars: json.stargazers_count };
+  const popularProjects = await getPopularProjects();
+  return { projects: popularProjects };
 };
 
 export default Home;
