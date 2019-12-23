@@ -5,7 +5,7 @@ import Head from 'next/head';
 import { Container, Row, GridItem, Grid } from '../components/Grid';
 import { Hero, HeroCarousel } from '../components/Hero';
 import SearchBar from '../components/Search/SearchBar';
-import SectionHeader from '../components/SectionHeader';
+import Section from '../components/Section';
 
 class Home extends Component {
   constructor(props) {
@@ -27,22 +27,22 @@ class Home extends Component {
           <HeroCarousel />
         </Hero>
 
-        <section>
+        <Section>
           <Container>
-            <SectionHeader title="Popular Projects" />
-            Next | Bootstrap | freeCodeCamp | You-Dont-Know-JS
+            <Section.Header title="Popular Projects" />
+            VS Code | Bootstrap | freeCodeCamp | React
             {/* https://www.freecodecamp.org/news/the-10-github-repos-people-mention-the-most-in-freecodecamps-main-chat-room-189750600fa4/ */}
           </Container>
-        </section>
+        </Section>
         <section>
           <Container>
-            <SectionHeader title="Developed by" />
+            {/* <SectionHeader title="Developed by" /> */}
             {/* https://stripe.com/ lifting cards section*/}
           </Container>
         </section>
         <section>
           <Container>
-            <SectionHeader title="GitHub" />
+            {/* <SectionHeader title="GitHub" /> */}
             {/* https://stripe.com/ right below lifting card section*/}
           </Container>
         </section>
@@ -52,9 +52,18 @@ class Home extends Component {
 }
 
 Home.getInitialProps = async ({ req }) => {
-  const res = await fetch('https://api.github.com/repos/zeit/next.js');
-  const json = await res.json();
-  return { stars: json.stargazers_count };
+  const baseUrl = 'https://api.github.com/repos';
+  // Visual Code, Free code camp, Bootstrap, React
+  const visualStudioCode = await fetch(`${baseUrl}/microsoft/vscode`);
+  const bootstrap = await fetch(`${baseUrl}/microsoft/vscode`);
+  const freeCodeCamp = await fetch(`${baseUrl}/freeCodeCamp/freeCodeCamp`);
+  const react = await fetch(`${baseUrl}/facebook/react`);
+  // try {
+  //   const nextJS = await fetch('https://api.github.com/repos/zeit/next.js');
+  //   const
+  //   const json = await res.json();
+  // }
+  // return { stars: json.stargazers_count };
 };
 
 export default Home;
