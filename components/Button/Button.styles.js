@@ -14,9 +14,10 @@ const buttonStyles = {
     display: inline-block;
     height: auto;
     margin-right: ${pxToRem(8)};
-    /* ...all the styles for both buttons go in here because they are the same thing */
+    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+  
     &:hover {
-      /* hover styles here */
+      transform: translateY(-1px);
     }
   `
 };
@@ -28,9 +29,6 @@ export const StyledButton = styled.button`
   // `}
 `;
 
-export const StyledButtonLink = styled.a`
+export const StyledButtonLink = styled(Link)`
   ${buttonStyles.default};
-  ${({ theme }) => css`
-    text-align: center;
-  `}
 `;

@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { StyledButton, StyledButtonLink } from './Button.styles';
 import { prototype } from 'events';
 
-const Button = ({ text, variant, href, submit }) => {
+const Button = ({ text, variant, href, type }) => {
   if (variant === 'link') {
     return <StyledButtonLink href={href}>{text}</StyledButtonLink>;
   } else {
-    return <StyledButton type={submit} >{text}</StyledButton>;
+    return <StyledButton type={type} >{text}</StyledButton>;
   }
 };
 Button.propTypes = {
