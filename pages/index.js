@@ -6,8 +6,10 @@ import { Container, Row, GridItem, Grid } from '../components/Grid';
 import { Hero, HeroCarousel } from '../components/Hero';
 import SearchBar from '../components/Search/SearchBar';
 import Section from '../components/Section';
+import Pill from '../components/Pill';
 
 import getPopularProjects from '../common/getPopularProjects';
+import popularProjects from '../common/popularProjects';
 
 class Home extends Component {
   constructor(props) {
@@ -32,6 +34,7 @@ class Home extends Component {
         <Section>
           <Container>
             <Section.Header title="Popular Projects" />
+            <Pill value="3,569" />
             VS Code | Bootstrap | freeCodeCamp | React
             {/* https://www.freecodecamp.org/news/the-10-github-repos-people-mention-the-most-in-freecodecamps-main-chat-room-189750600fa4/ */}
           </Container>
@@ -54,7 +57,8 @@ class Home extends Component {
 }
 
 Home.getInitialProps = async ({ req }) => {
-  const popularProjects = await getPopularProjects();
+  // const popularProjects = await getPopularProjects();
+  // return { projects: popularProjects };
   return { projects: popularProjects };
 };
 
