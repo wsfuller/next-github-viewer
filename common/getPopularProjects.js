@@ -3,7 +3,7 @@ const getPopularProjects = async () => {
   const reqOptions = {
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `${process.env.GITHUB_TOKEN}`
+      Authorization: ''
     }
   };
   let projects = {};
