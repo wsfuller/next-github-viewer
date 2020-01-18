@@ -6,7 +6,7 @@ const getPopularProjects = async () => {
       Authorization: ''
     }
   };
-  let projects = {};
+  let projects = [];
 
   try {
     const visualStudioCode = await (await fetch(`${baseUrl}/microsoft/vscode`, reqOptions)).json();
@@ -17,10 +17,10 @@ const getPopularProjects = async () => {
     )).json();
     const react = await (await fetch(`${baseUrl}/facebook/react`, reqOptions)).json();
 
-    projects.visualStudio = visualStudioCode;
-    projects.bootstrap = bootstrap;
-    projects.freeCodeCamp = freeCodeCamp;
-    projects.react = react;
+    projects.push(visualStudioCode);
+    projects.push(bootstrap);
+    projects.push(freeCodeCamp);
+    projects.push(react);
   } catch (error) {
     console.error(`Error getting popular projects ${error}`);
     projects.error = error;
