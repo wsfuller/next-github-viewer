@@ -1,5 +1,5 @@
-const popularProjects = {
-  visualStudio: {
+const projects = [
+  {
     id: 41881900,
     node_id: 'MDEwOlJlcG9zaXRvcnk0MTg4MTkwMA==',
     name: 'vscode',
@@ -123,7 +123,7 @@ const popularProjects = {
     network_count: 13447,
     subscribers_count: 2876
   },
-  bootstrap: {
+  {
     id: 2126244,
     node_id: 'MDEwOlJlcG9zaXRvcnkyMTI2MjQ0',
     name: 'bootstrap',
@@ -248,7 +248,7 @@ const popularProjects = {
     network_count: 67793,
     subscribers_count: 7211
   },
-  freeCodeCamp: {
+  {
     id: 28457823,
     node_id: 'MDEwOlJlcG9zaXRvcnkyODQ1NzgyMw==',
     name: 'freeCodeCamp',
@@ -376,7 +376,7 @@ const popularProjects = {
     network_count: 23433,
     subscribers_count: 8387
   },
-  react: {
+  {
     id: 10270250,
     node_id: 'MDEwOlJlcG9zaXRvcnkxMDI3MDI1MA==',
     name: 'react',
@@ -501,6 +501,6 @@ const popularProjects = {
     network_count: 27050,
     subscribers_count: 6645
   }
-};
+];
 
-export default popularProjects;
+export default projects;
