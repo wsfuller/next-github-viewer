@@ -6,8 +6,6 @@ import { Container, Row, GridItem, Grid } from '../components/Grid';
 import { Hero, HeroCarousel } from '../components/Hero';
 import SearchBar from '../components/Search/SearchBar';
 import Section from '../components/Section';
-import Card from '../components/Card';
-import Pill from '../components/Pill';
 
 // import getPopularProjects from '../common/getPopularProjects';
 import popularProjects from '../common/popularProjects';
@@ -60,24 +58,5 @@ Home.getInitialProps = async ({ req }) => {
   return { projects: popularProjects };
   // return { projects };
 };
-
-function renderPopularProjects(data) {
-  data.map(project => {
-    console.log('project breh: ', project);
-    return (
-      <Card>
-        <img src="http://placehold.it/250x250" alt="placeholder" />
-        <Card.Content>
-          {project.name}
-          <Card.Title />
-          <Pill value="3,569" />
-        </Card.Content>
-      </Card>
-    );
-  });
-
-  // VS Code | Bootstrap | freeCodeCamp | React
-  // https://www.freecodecamp.org/news/the-10-github-repos-people-mention-the-most-in-freecodecamps-main-chat-room-189750600fa4/
-}
 
 export default Home;
