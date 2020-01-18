@@ -9,9 +9,11 @@ import Section from '../components/Section';
 import Card from '../components/Card';
 import Pill from '../components/Pill';
 
-import getPopularProjects from '../common/getPopularProjects';
+// import getPopularProjects from '../common/getPopularProjects';
 import popularProjects from '../common/popularProjects';
 import CardTitle from '../components/Card/Title';
+
+import PopularProjects from '../components/ContentSections/PopularProjects';
 
 class Home extends Component {
   constructor(props) {
@@ -34,12 +36,8 @@ class Home extends Component {
           <HeroCarousel />
         </Hero>
 
-        <Section>
-          <Container>
-            <Section.Header title="Popular Projects" />
-            {renderPopularProjects(projects)}
-          </Container>
-        </Section>
+        <PopularProjects projects={projects} />
+
         <section>
           <Container>
             {/* <SectionHeader title="Developed by" /> */}
@@ -59,24 +57,27 @@ class Home extends Component {
 
 Home.getInitialProps = async ({ req }) => {
   // const popularProjects = await getPopularProjects();
-  // return { projects: popularProjects };
   return { projects: popularProjects };
+  // return { projects };
 };
 
 function renderPopularProjects(data) {
-  console.log('renderPopularProjects data: ', data);
-  // get returned data object and .map()
-  return (
-    <Card>
-      <img src="http://placehold.it/250x250" alt="placeholder" />
-      <Card.Content>
-        <Card.Title />
-        <Pill value="3,569" />
-      </Card.Content>
-    </Card>
-    // VS Code | Bootstrap | freeCodeCamp | React
-    // {/* https://www.freecodecamp.org/news/the-10-github-repos-people-mention-the-most-in-freecodecamps-main-chat-room-189750600fa4/ */}
-  );
+  data.map(project => {
+    console.log('project breh: ', project);
+    return (
+      <Card>
+        <img src="http://placehold.it/250x250" alt="placeholder" />
+        <Card.Content>
+          {project.name}
+          <Card.Title />
+          <Pill value="3,569" />
+        </Card.Content>
+      </Card>
+    );
+  });
+
+  // VS Code | Bootstrap | freeCodeCamp | React
+  // https://www.freecodecamp.org/news/the-10-github-repos-people-mention-the-most-in-freecodecamps-main-chat-room-189750600fa4/
 }
 
 export default Home;
