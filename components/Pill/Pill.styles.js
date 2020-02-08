@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { pxToRem, theme } from '../_theme';
 
-const StyledPill = styled.div`
+export const StyledPill = styled.div`
   ${({ filled, theme }) => css`
     display: inline-flex;
     justify-content: center;
@@ -19,6 +19,38 @@ const StyledPill = styled.div`
           color: ${theme.variables.colors.primary.dark};
         `}
   `}
+`;
+
+export const StyledIcon = styled.div`
+  ${({ theme, iconPosition }) => css`
+    display: inline-block;
+    justify-content: center;
+    position: relative;
+    order: ${iconPosition === 'left' ? 1 : 2};
+    ${iconPosition === 'left'
+      ? `margin-right: ${pxToRem(theme.variables.baseUnit)}`
+      : `margin-right: ${pxToRem(theme.variables.baseUnit)}`};
+    font-size: ${pxToRem(theme.variables.baseUnit * 2.5)};
+  `}
+`;
+
+export const StyledValue = styled.div`
+  ${({ iconPosition }) => css`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    order: ${iconPosition === 'left' ? 2 : 1};
+  `}
+`;
+
+export const StyledIconValue = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 `;
 
 export default StyledPill;

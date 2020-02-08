@@ -1,16 +1,35 @@
 import PropTypes from 'prop-types';
 
-import StyledPill from './Pill.styles';
+import { StyledPill, StyledIcon, StyledValue, StyledIconValue } from './Pill.styles';
 
-const Pill = ({ filled, value }) => <StyledPill filled={filled}>{value}</StyledPill>;
+const Pill = ({ filled, value, icon, iconPosition }) => {
+  const renderContent = () => {
+    console.log('icon: ', icon);
+    if (icon) {
+      return (
+        <StyledIconValue iconPosition={iconPosition}>
+          <StyledValue iconPosition={iconPosition}>{value}</StyledValue>
+          <StyledIcon iconPosition={iconPosition}>{icon}</StyledIcon>
+        </StyledIconValue>
+      );
+    } else {
+      return <StyledValue>{value}</StyledValue>;
+    }
+  };
+  return <StyledPill filled={filled}>{renderContent()}</StyledPill>;
+};
 
 Pill.propTypes = {
   filled: PropTypes.bool,
-  value: PropTypes.string.isRequired
+  value: PropTypes.string.isRequired,
+  icon: PropTypes.node,
+  iconPosition: PropTypes.string
 };
 
 Pill.defaultProps = {
-  filled: false
+  filled: false,
+  icon: null,
+  iconPosition: 'left'
 };
 
 export default Pill;
