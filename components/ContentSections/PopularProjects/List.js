@@ -1,9 +1,14 @@
+import { MdGroupAdd } from 'react-icons/md';
 import { FaFreeCodeCamp } from 'react-icons/fa';
 import { DiBootstrap, DiReact, DiVisualstudio } from 'react-icons/di';
+
+import { theme } from '../../_theme';
+import numberWithCommas from '../../../common/numberWithCommas';
 
 import { Row, GridItem, Grid } from '../../Grid';
 import Card from '../../Card';
 import Pill from '../../Pill';
+import StyledIcon from './Icon.styles';
 
 const List = ({ data }) => (
   <Grid
@@ -26,15 +31,13 @@ const List = ({ data }) => (
     }}
   >
     {data.map(project => {
-      console.log('project breh: ', project);
       return (
-        <GridItem>
-          <Card key={project.id}>
+        <GridItem key={project.id}>
+          <Card>
             {renderIcon(project.name)}
-            {/* <img src="http://placehold.it/250x250" alt="placeholder" /> */}
             <Card.Content>
               <Card.Title title={formatName(project.name)} />
-              <Pill value="3,569" />
+              <Pill value={numberWithCommas(project.subscribers_count)} icon={<MdGroupAdd />} />
             </Card.Content>
           </Card>
         </GridItem>
@@ -44,14 +47,15 @@ const List = ({ data }) => (
 );
 
 function renderIcon(name) {
+  const iconColor = theme.variables.colors.secondary.default;
   const iconMapping = {
-    vscode: <DiVisualstudio />,
-    bootstrap: <DiBootstrap />,
-    freeCodeCamp: <FaFreeCodeCamp />,
-    react: <DiReact />
+    vscode: <DiVisualstudio color={iconColor} />,
+    bootstrap: <DiBootstrap color={iconColor} />,
+    freeCodeCamp: <FaFreeCodeCamp color={iconColor} />,
+    react: <DiReact color={iconColor} />
   };
 
-  return iconMapping[name];
+  return <StyledIcon>{iconMapping[name]}</StyledIcon>;
 }
 
 function formatName(name) {
