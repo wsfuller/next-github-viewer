@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 
-import List from './List';
-
 import Section from '../../Section';
 import { Container, Row, GridItem, Grid } from '../../Grid';
+import List from './List';
 
 const PopularProjectsContainer = ({ projects }) => (
   <Section>
