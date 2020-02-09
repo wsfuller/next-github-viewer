@@ -5,7 +5,13 @@ import Head from 'next/head';
 import { Container, Row, GridItem, Grid } from '../components/Grid';
 import { Hero, HeroCarousel } from '../components/Hero';
 import SearchBar from '../components/Search/SearchBar';
-import SectionHeader from '../components/SectionHeader';
+import Section from '../components/Section';
+
+// import getPopularProjects from '../common/getPopularProjects';
+import popularProjects from '../common/popularProjects';
+import CardTitle from '../components/Card/Title';
+
+import PopularProjects from '../components/ContentSections/PopularProjects';
 
 class Home extends Component {
   constructor(props) {
@@ -16,7 +22,8 @@ class Home extends Component {
   }
 
   render() {
-    const { stars } = this.props;
+    const { projects } = this.props;
+    console.log('index page props: ', this.props);
     return (
       <Fragment>
         <Head>
@@ -27,22 +34,17 @@ class Home extends Component {
           <HeroCarousel />
         </Hero>
 
+        <PopularProjects projects={projects} />
+
         <section>
           <Container>
-            <SectionHeader title="Popular Projects" />
-            Next | Bootstrap | freeCodeCamp | You-Dont-Know-JS
-            {/* https://www.freecodecamp.org/news/the-10-github-repos-people-mention-the-most-in-freecodecamps-main-chat-room-189750600fa4/ */}
-          </Container>
-        </section>
-        <section>
-          <Container>
-            <SectionHeader title="Developed by" />
+            {/* <SectionHeader title="Developed by" /> */}
             {/* https://stripe.com/ lifting cards section*/}
           </Container>
         </section>
         <section>
           <Container>
-            <SectionHeader title="GitHub" />
+            {/* <SectionHeader title="GitHub" /> */}
             {/* https://stripe.com/ right below lifting card section*/}
           </Container>
         </section>
@@ -52,9 +54,9 @@ class Home extends Component {
 }
 
 Home.getInitialProps = async ({ req }) => {
-  const res = await fetch('https://api.github.com/repos/zeit/next.js');
-  const json = await res.json();
-  return { stars: json.stargazers_count };
+  // const popularProjects = await getPopularProjects();
+  return { projects: popularProjects };
+  // return { projects };
 };
 
 export default Home;
