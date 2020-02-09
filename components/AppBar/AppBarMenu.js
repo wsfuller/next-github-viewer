@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 import { IoIosClose } from 'react-icons/io';
 
