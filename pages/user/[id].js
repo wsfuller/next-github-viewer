@@ -9,7 +9,6 @@ import Stat from '../../components/Stat';
 import hasUrlProtocol from '../../common/hasUrlProtocol';
 
 const Profile = ({ user: { user, followers } }) => {
-  console.log('user: ', user);
   return (
     <Fragment>
       <Head>

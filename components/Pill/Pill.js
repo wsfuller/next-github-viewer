@@ -4,7 +4,6 @@ import { StyledPill, StyledIcon, StyledValue, StyledIconValue } from './Pill.sty
 
 const Pill = ({ filled, value, icon, iconPosition }) => {
   const renderContent = () => {
-    console.log('icon: ', icon);
     if (icon) {
       return (
         <StyledIconValue iconPosition={iconPosition}>
