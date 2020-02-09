@@ -9,6 +9,7 @@ import {
   AvatarExample,
   ListExample,
   StatExample,
+  ButtonExample,
   PillExample
 } from '../components/KitchenSinkExamples';
 
@@ -32,6 +33,7 @@ const KitchenSink = () => (
     <AvatarExample />
     <ListExample />
     <StatExample />
+    <ButtonExample/>
     <PillExample />
   </Fragment>
 );

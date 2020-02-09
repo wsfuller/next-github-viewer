@@ -4,5 +4,6 @@ import AvatarExample from './Avatar.example';
 import ListExample from './List.example';
 import StatExample from './Stat.example';
 import PillExample from './Pill.example';
+import ButtonExample from './Button.example';
 
-export { TypographyExample, GridExample, AvatarExample, ListExample, StatExample, PillExample };
+export { TypographyExample, GridExample, AvatarExample, ListExample, StatExample, PillExample, ButtonExample };

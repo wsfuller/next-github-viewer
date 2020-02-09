@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 
 import { IoIosClose } from 'react-icons/io';
 
@@ -9,7 +10,6 @@ import {
   StyledMenuHeader,
   StyledAppBarMenuButton
 } from './AppBar.styles';
-import Link from '../Link';
 import Image from '../Image';
 
 import Logo from '../../static/logo-text-icon.svg';
@@ -20,7 +20,9 @@ const AppBarMenu = ({ menu, toggleMenu }) => {
       <StyledAppBarMenu showMenu={menu}>
         <StyledMenuHeader>
           <Link href="/">
-            <Image source={Logo} maxWidth={150} htmlAttributes={{ alt: 'Logo' }} />
+            <a>
+              <Image source={Logo} maxWidth={150} htmlAttributes={{ alt: 'Logo' }} />
+            </a>
           </Link>
           <StyledAppBarMenuButton onClick={() => toggleMenu()}>
             <IoIosClose />
