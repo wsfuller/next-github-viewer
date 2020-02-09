@@ -1,10 +1,9 @@
 import { Fragment } from 'react';
-import styled from 'styled-components';
+import Link from 'next/Link';
 
 import Avatar from '../Avatar';
 import { List, ListItem } from '../List';
 import Typography from '../Typography';
-import Link from '../Link';
 
 const SearchResults = ({ results }) => {
   if (!results.items && results.error) {
@@ -21,8 +20,10 @@ const SearchResults = ({ results }) => {
         {results.items.map(item => (
           <ListItem key={item.id} striped hover>
             <Link href={`/user/${item.id}`}>
-              <Avatar source={item.avatar_url} htmlAttributes={{ alt: `${item.login} avatar` }} />
-              <Typography variant="body1">{item.login}</Typography>
+              <a>
+                <Avatar source={item.avatar_url} htmlAttributes={{ alt: `${item.login} avatar` }} />
+                <Typography variant="body1">{item.login}</Typography>
+              </a>
             </Link>
           </ListItem>
         ))}

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import Link from 'next/Link';
 
 import { IoIosMenu } from 'react-icons/io';
 
 import { pxToRem } from '../_theme';
 import { Container, Grid } from '../Grid';
-import Link from '../Link';
+
 import Image from '../Image';
 import { StyledAppBar, StyledAppBarButton } from './AppBar.styles';
 import AppBarMenu from './AppBarMenu';
@@ -31,7 +32,9 @@ const AppBar = () => {
             <IoIosMenu />
           </StyledAppBarButton>
           <Link href="/">
-            <Image source={Logo} htmlAttributes={{ alt: 'Logo' }} />
+            <a>
+              <Image source={Logo} htmlAttributes={{ alt: 'Logo' }} />
+            </a>
           </Link>
         </Grid>
 
