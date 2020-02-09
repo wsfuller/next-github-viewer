@@ -3,7 +3,7 @@
 exports[`<Stat /> renders correctly 1`] = `
 Array [
   <h1
-    className="Typographystyles__StyledH1-sc-1n6ui1k-0 bvGdAG"
+    className="Typographystyles__StyledH1-sc-1n6ui1k-0 jlaycU"
     data-testid="statTitle"
     transform={null}
   >

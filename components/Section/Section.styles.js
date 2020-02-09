@@ -1,7 +1,17 @@
 import styled, { css } from 'styled-components';
 import { pxToRem } from '../_theme';
 
-const StyledSectionHeader = styled.h2`
+export const StyledSection = styled.section`
+  ${({ theme }) => css`
+    padding: ${pxToRem(theme.variables.baseUnit * 2)} 0;
+
+    @media screen and (min-width: ${theme.variables.breakpoints.large}px) {
+      padding: ${pxToRem(theme.variables.baseUnit * 4)} 0;
+    }
+  `}
+`;
+
+export const StyledSectionHeader = styled.h2`
   ${({ theme }) => css`
     display: inline-grid;
     grid-template-columns: min-content auto;
@@ -16,5 +26,3 @@ const StyledSectionHeader = styled.h2`
     }
   `}
 `;
-
-export default StyledSectionHeader;

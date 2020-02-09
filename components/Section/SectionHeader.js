@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import StyledSectionHeader from './SectionHeader.styles';
+import { StyledSectionHeader } from './Section.styles';
 
 const SectionHeader = ({ title }) => <StyledSectionHeader>{title}</StyledSectionHeader>;
 

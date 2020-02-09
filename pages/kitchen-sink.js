@@ -9,7 +9,8 @@ import {
   AvatarExample,
   ListExample,
   StatExample,
-  ButtonExample
+  ButtonExample,
+  PillExample
 } from '../components/KitchenSinkExamples';
 
 import Typography from '../components/Typography';
@@ -33,6 +34,7 @@ const KitchenSink = () => (
     <ListExample />
     <StatExample />
     <ButtonExample/>
+    <PillExample />
   </Fragment>
 );
 
